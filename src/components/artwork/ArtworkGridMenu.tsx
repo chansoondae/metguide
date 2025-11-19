@@ -47,10 +47,10 @@ export function ArtworkGridMenu({ artworks, sections, currentArtworkId }: Artwor
         behavior: 'smooth'
       });
 
-      // Close menu after scroll starts
+      // Close menu after scroll starts - delay to prevent layout shift during scroll
       setTimeout(() => {
         setMobileMenuOpen(false);
-      }, 100);
+      }, 500);
     } else {
       // Element not loaded - navigate with query parameter
       setMobileMenuOpen(false);

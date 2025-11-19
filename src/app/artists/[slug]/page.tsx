@@ -1,6 +1,7 @@
 import { getAllArtworks } from '@/lib/data/artworks';
 import { getArtistInfo, getArtistFromSlug, getArtistSlug, getAllArtistNames } from '@/lib/data/artists';
 import { ArtistProfile } from '@/components/artist/ArtistProfile';
+import { ArtistPageContainer } from '@/components/artist/ArtistPageContainer';
 import { notFound } from 'next/navigation';
 
 // Force static generation for all artist pages
@@ -33,5 +34,15 @@ export default async function ArtistPage({ params }: PageProps) {
   const allArtworks = await getAllArtworks();
   const artistArtworks = allArtworks.filter(artwork => artwork.artist === artistName);
 
-  return <ArtistProfile artistInfo={artistInfo} artworks={artistArtworks} />;
+  // Get all artists for the menu
+  const allArtistNames = getAllArtistNames();
+  const allArtists = allArtistNames.map(name => getArtistInfo(name)).filter(Boolean);
+
+  return (
+    <ArtistPageContainer
+      artistInfo={artistInfo}
+      artworks={artistArtworks}
+      allArtists={allArtists}
+    />
+  );
 }

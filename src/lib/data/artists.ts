@@ -260,6 +260,56 @@ export function getArtistInfo(artistName: string): ArtistInfo | null {
   return artistsData[artistName] || null;
 }
 
+// Mapping from Korean names to English slugs
+const artistSlugMapping: Record<string, string> = {
+  "살바도르 달리 (1904–1989)": "Salvador_Dali",
+  "에드가 드가 (1834–1917)": "Edgar_Degas",
+  "전칭 귀스타브 쿠르베 (1819–1877)": "Gustave_Courbet",
+  "피에르 퓌비 드샤반 (1824–1898)": "Pierre_Puvis_de_Chavannes",
+  "폴 고갱 (1848–1903)": "Paul_Gauguin",
+  "폴 세잔 (1839–1906)": "Paul_Cezanne",
+  "앙리 마티스 (1869–1954)": "Henri_Matisse",
+  "쉬잔 발라동 (1865–1938)": "Suzanne_Valadon",
+  "조르주 쇠라 (1859–1891)": "Georges_Seurat",
+  "폴 시냐크 (1863–1935)": "Paul_Signac",
+  "오귀스트 로댕 (1840–1917)": "Auguste_Rodin",
+  "아리스티드 마욜 (1861–1944)": "Aristide_Maillol",
+  "장 프레데리크 바지유 (1841–1870)": "Frederic_Bazille",
+  "전칭 오노레 도미에 (1808–1879)": "Honore_Daumier",
+  "오노레 도미에 (1808–1879)": "Honore_Daumier",
+  "피에르 오귀스트 코 (1837–1883)": "Pierre-Auguste_Cot",
+  "귀스타브 모로 이후 (1826–1898)": "Gustave_Moreau",
+  "라이문도 데 마드라소 이 가레타 (1841–1920)": "Raimundo_de_Madrazo",
+  "오딜롱 르동 (1840–1916)": "Odilon_Redon",
+  "에두아르 뷔야르 (1868–1940)": "Edouard_Vuillard",
+  "오귀스트 르누아르 (1841–1919)": "Pierre-Auguste_Renoir",
+  "아돌프 멘첼 (1815–1905)": "Adolph_Menzel",
+  "마리 로랑생 (1883–1956)": "Marie_Laurencin",
+  "베르트 모리조 (1841–1895)": "Berthe_Morisot",
+  "메리 커샛 (1844–1926)": "Mary_Cassatt",
+  "알베르 마르케 (1875–1947)": "Albert_Marquet",
+  "키스 반 동겐 (1877–1968)": "Kees_van_Dongen",
+  "테오도르 루소 (1812–1867)": "Theodore_Rousseau",
+  "앙리 조제프 아르피니 (1819–1916)": "Henri-Joseph_Harpignies",
+  "쥘 뒤프레 (1811–1889)": "Jules_Dupre",
+  "샤를 프랑수아 도비니 (1817–1878)": "Charles-Francois_Daubigny",
+  "전칭 외젠 부댕 (1824–1898)": "Eugene_Boudin",
+  "앙리 에드몽 크로스 (1856–1910)": "Henri-Edmond_Cross",
+  "빈센트 반 고흐 (1853–1890)": "Vincent_van_Gogh",
+  "아르망 기요맹 (1841–1927)": "Armand_Guillaumin",
+  "조르주 루오 (1871–1958)": "Georges_Rouault",
+  "모리스 위트릴로 (1883–1955)": "Maurice_Utrillo",
+  "카미유 피사로 (1830–1903)": "Camille_Pissarro",
+  "알프레드 시슬레 (1839–1899)": "Alfred_Sisley",
+  "피에르 보나르 (1867–1947)": "Pierre_Bonnard",
+  "모리스 드 블라맹크 (1876–1958)": "Maurice_de_Vlaminck"
+};
+
+// Reverse mapping for slug to artist name lookup
+const slugToArtistMapping: Record<string, string> = Object.fromEntries(
+  Object.entries(artistSlugMapping).map(([name, slug]) => [slug, name])
+);
+
 // Get all artist names
 export function getAllArtistNames(): string[] {
   return Object.keys(artistsData);
@@ -267,10 +317,10 @@ export function getAllArtistNames(): string[] {
 
 // Create URL-safe slug from artist name
 export function getArtistSlug(artistName: string): string {
-  return encodeURIComponent(artistName);
+  return artistSlugMapping[artistName] || artistName.replace(/\s+/g, '_');
 }
 
 // Get artist name from slug
 export function getArtistFromSlug(slug: string): string {
-  return decodeURIComponent(slug);
+  return slugToArtistMapping[slug] || slug.replace(/_/g, ' ');
 }
