@@ -39,14 +39,6 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/timeline"
-                  className="text-sm text-gray-600 hover:text-blue-900"
-                >
-                  Timeline
-                </a>
-              </li>
-              <li>
-                <a
                   href="/favorites"
                   className="text-sm text-gray-600 hover:text-blue-900"
                 >

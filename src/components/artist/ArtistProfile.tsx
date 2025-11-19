@@ -29,7 +29,7 @@ export function ArtistProfile({ artistInfo, artworks }: ArtistProfileProps) {
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
             {/* Avatar */}
             <div className="flex justify-center sm:justify-start">
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 border-4 border-gray-100">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-gray-200 shrink-0 border-4 border-gray-100">
                 <Image
                   src={avatarSrc}
                   alt={artistInfo.name}

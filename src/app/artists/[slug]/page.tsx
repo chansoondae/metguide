@@ -3,10 +3,14 @@ import { getArtistInfo, getArtistFromSlug, getArtistSlug, getAllArtistNames } fr
 import { ArtistProfile } from '@/components/artist/ArtistProfile';
 import { notFound } from 'next/navigation';
 
+// Force static generation for all artist pages
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const artists = getAllArtistNames();
   return artists.map((artist) => ({
-    slug: getArtistSlug(artist),
+    slug: getArtistSlug(artist)
   }));
 }
 

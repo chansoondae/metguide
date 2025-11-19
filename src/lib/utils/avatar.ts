@@ -4,7 +4,7 @@
 export const artistAvatars: Record<string, string> = {
   "살바도르 달리 (1904–1989)": "/avatars/dali.jpg",
   "에드가 드가 (1834–1917)": "/avatars/degas.jpg",
-  "귀스타브 쿠르베 (1819–1877)": "/avatars/courbet.jpg",
+  "전칭 귀스타브 쿠르베 (1819–1877)": "/avatars/courbet.jpg",
   "피에르 퓌비 드샤반 (1824–1898)": "/avatars/pierrepuvis.jpg",
   "폴 고갱 (1848–1903)": "/avatars/gauguin.jpg",
   "폴 세잔 (1839–1906)": "/avatars/cezanne.jpg",

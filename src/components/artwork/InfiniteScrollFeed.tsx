@@ -160,7 +160,7 @@ export function InfiniteScrollFeed({ artworks, onCurrentArtworkChange, targetArt
   }, [displayedArtworks, onCurrentArtworkChange]);
 
   return (
-    <div className="space-y-0 sm:space-y-0">
+    <div className="max-w-[700px] mx-auto space-y-0 sm:space-y-0">
       {displayedArtworks.map((artwork, index) => (
         <div
           key={artwork.id}

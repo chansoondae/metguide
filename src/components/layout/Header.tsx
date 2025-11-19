@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Search, Heart, Moon, Sun } from 'lucide-react';
+import { Search, Heart, Moon, Sun, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useFavoritesStore } from '@/lib/stores/favorites-store';
 import { useUIStore } from '@/lib/stores/ui-store';
@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 export function Header() {
   const { favorites } = useFavoritesStore();
-  const { setSearchOpen } = useUIStore();
+  const { setSearchOpen, mobileMenuOpen, setMobileMenuOpen } = useUIStore();
   const { theme, toggleTheme, setTheme } = useThemeStore();
 
   useEffect(() => {
@@ -62,6 +62,14 @@ export function Header() {
                 )}
               </Button>
             </Link>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              title="Open menu"
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>
