@@ -37,10 +37,10 @@ export function ArtworkPost({ artwork }: ArtworkPostProps) {
   };
 
   const descriptionText = artwork.description || '';
-  const shouldShowMore = descriptionText.length > 200;
+  const shouldShowMore = descriptionText.length > 100;
   const displayedDescription = showFullDescription || !shouldShowMore
     ? descriptionText
-    : descriptionText.slice(0, 200) + '...';
+    : descriptionText.slice(0, 100) + '...';
 
   // Get avatar image source (local or fallback to UI avatars)
   const localAvatarPath = artistAvatars[artwork.artist];

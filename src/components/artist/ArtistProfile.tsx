@@ -14,6 +14,7 @@ interface ArtistProfileProps {
 
 export function ArtistProfile({ artistInfo, artworks }: ArtistProfileProps) {
   const [avatarError, setAvatarError] = useState(false);
+  const [showFullBiography, setShowFullBiography] = useState(false);
 
   // Get avatar image source
   const localAvatarPath = artistAvatars[artistInfo.name];
@@ -21,15 +22,22 @@ export function ArtistProfile({ artistInfo, artworks }: ArtistProfileProps) {
     ? localAvatarPath
     : `https://ui-avatars.com/api/?name=${encodeURIComponent(artistInfo.name)}&background=random&size=150`;
 
+  // Biography display logic
+  const biographyText = artistInfo.biography || '';
+  const shouldShowMore = biographyText.length > 100;
+  const displayedBiography = showFullBiography || !shouldShowMore
+    ? biographyText
+    : biographyText.slice(0, 100) + '...';
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Profile Header - Instagram Style */}
         <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8 mb-6 shadow-sm">
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
+          <div className="flex flex-row gap-4 sm:gap-12">
             {/* Avatar */}
-            <div className="flex justify-center sm:justify-start">
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-gray-200 shrink-0 border-4 border-gray-100">
+            <div className="flex justify-start">
+              <div className="relative w-20 h-20 sm:w-40 sm:h-40 rounded-full overflow-hidden bg-gray-200 shrink-0 border-4 border-gray-100">
                 <Image
                   src={avatarSrc}
                   alt={artistInfo.name}
@@ -56,7 +64,7 @@ export function ArtistProfile({ artistInfo, artworks }: ArtistProfileProps) {
               </div>
 
               {/* Stats Row */}
-              <div className="flex gap-10 text-center sm:text-left">
+              <div className="flex gap-6 sm:gap-10 text-left">
                 <div>
                   <div className="text-2xl font-bold text-gray-900" style={{fontFamily: 'var(--font-noto-sans-kr), sans-serif', fontWeight: 700}}>{artworks.length}</div>
                   <div className="text-sm text-gray-600 mt-1" style={{fontFamily: 'var(--font-noto-sans-kr), sans-serif', fontWeight: 400}}>작품</div>
@@ -70,7 +78,16 @@ export function ArtistProfile({ artistInfo, artworks }: ArtistProfileProps) {
               {/* Biography */}
               <div className="pt-2">
                 <p className="text-base text-gray-700 leading-loose" style={{fontFamily: 'var(--font-noto-sans-kr), sans-serif', fontWeight: 400, letterSpacing: '-0.01em'}}>
-                  {artistInfo.biography}
+                  {displayedBiography}
+                  {shouldShowMore && !showFullBiography && (
+                    <button
+                      onClick={() => setShowFullBiography(true)}
+                      className="text-gray-600 hover:text-gray-900 font-medium ml-2"
+                      style={{fontFamily: 'var(--font-noto-sans-kr), sans-serif', fontWeight: 500}}
+                    >
+                      더보기
+                    </button>
+                  )}
                 </p>
               </div>
             </div>

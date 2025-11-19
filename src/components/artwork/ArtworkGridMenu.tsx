@@ -36,21 +36,21 @@ export function ArtworkGridMenu({ artworks, sections, currentArtworkId }: Artwor
     const artworkElement = document.getElementById(`artwork-${artworkId}`);
 
     if (artworkElement) {
-      // Element exists - scroll to it
-      const header = document.querySelector('header');
-      const headerHeight = header ? header.offsetHeight : 64;
-      const elementPosition = artworkElement.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerHeight - 8;
+      // Close menu first
+      setMobileMenuOpen(false);
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-
-      // Close menu after scroll starts - delay to prevent layout shift during scroll
+      // Scroll after menu closes (wait for animation to complete)
       setTimeout(() => {
-        setMobileMenuOpen(false);
-      }, 500);
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 64;
+        const elementPosition = artworkElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerHeight - 8;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 600);
     } else {
       // Element not loaded - navigate with query parameter
       setMobileMenuOpen(false);
@@ -76,7 +76,7 @@ export function ArtworkGridMenu({ artworks, sections, currentArtworkId }: Artwor
 
       {/* Slide Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-full sm:w-96 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[calc(100%-3rem)] sm:w-96 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
