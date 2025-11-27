@@ -1,0 +1,39 @@
+export const CAMERA_CONFIG = {
+  DEFAULT_POSITION: [0, 1.6, 5] as [number, number, number],
+  FOV: 75,
+  NEAR: 0.1,
+  FAR: 1000,
+};
+
+export const CONTROLS_CONFIG = {
+  MIN_DISTANCE: 0.5,
+  MAX_DISTANCE: 50,
+  ENABLE_DAMPING: true,
+  DAMPING_FACTOR: 0.05,
+  ENABLE_PAN: true,
+  PAN_SPEED: 1,
+  ROTATION_SPEED: 0.5,
+};
+
+export const HOTSPOT_CONFIG = {
+  DEFAULT_SCALE: 0.2,
+  HOVER_SCALE: 0.3,
+  PULSE_SPEED: 2,
+  DEFAULT_COLOR: '#4A90E2',
+  HOVER_COLOR: '#FFA500',
+  SELECTED_COLOR: '#FF6B6B',
+};
+
+export const PERFORMANCE_CONFIG = {
+  TARGET_FPS: 60,
+  MIN_FPS: 30,
+  PIXEL_RATIO: [1, 2] as [number, number],
+  SHADOW_MAP_SIZE: 2048,
+};
+
+export const MODEL_CONFIG = {
+  MAX_FILE_SIZE: 20 * 1024 * 1024, // 20MB
+  RECOMMENDED_FILE_SIZE: 5 * 1024 * 1024, // 5MB
+  MAX_TRIANGLES: 500000,
+  RECOMMENDED_TRIANGLES: 100000,
+};

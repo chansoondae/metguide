@@ -1,0 +1,314 @@
+export interface AudioGuideItem {
+  artist: string;
+  title: string;
+  description: string;
+  youtubeTimestamp: string;
+  chapter?: string;
+}
+
+export const audioGuideData: AudioGuideItem[] = [
+  {
+    artist: "Salvador Dali",
+    title: "The Lacemaker (after Vermeer)",
+    description: "요한네스 페르메이르의 레이스를 뜨는 여인을 그대로 모사한 작품인데요. 놀랍게도 이 작품을 그린 화가는 살바도르 달리라는 화가입니다. 보통 달리는 시계가 흘러내리고 기회한 꿈의 세계를 그린 초현실주의 선구자로 잘 알려져 있는데요. 이런 특정 작품을 똑같이 모사한 작품을 그렸다는 것이 좀 믿기지 않습니다. 그런데 더 놀라운 것은이 작품을 주문한 사람이 바로 로버트 리먼이라는 수집가라는 사실입니다.\n\n로버트 리먼 컬렉션은 르네상스에서 20세기 초까지를 이루는 굉장히 방대한 컬렉션을 가지고 있습니다. 그런데 아쉽게도 페르메이르의 작품을 얻지는 못했습니다. 그런데 달리는 이 레이스를 떼는 여인이 있는 집, 그 복제품이 있는 집에서 성장했습니다. 그래서 이 작품에 대해서 굉장히 잘 알고있었고 이 작품을 가지고 여러 가지 프로젝트를 머릿속으로 구상을 하고 있었습니다. 그래서 로버트 리먼이 사실을 알고 달리에게 이 작품의 모사본을 그려 줄 것을 요청을 한 것인데요. 이것을 요청한 서신이 이번 전시장에 묘사를 해 놓았습니다.",
+    youtubeTimestamp: "104s",
+    chapter: "Chapter 1: 몸, 현실의 나를 그리다"
+  },
+  {
+    artist: "Gustave Courbet",
+    title: "Man with Upraised Arm, Possibly a Self-Portrait",
+    description: "에꼴 데 보자르라는 아카데미에 입학하려고 했던 쿠르베의 드로잉을 보시면 굉장히 세밀하게 상체와 머리 얼굴을 묘사하고 있다는 것을 알 수가 있죠. 이렇게 누드 드로잉을 잘 그려야 본격적으로 대형 역사화를 그릴 수 있는 자격을 가진다는 것을 의미했기 때문에 화가들은 자신들의 자격을 증명하기 위해서이 누드 드로잉을 굉장히 열심히 학습을 했습니다. 그랬기 때문에 19세기에 보통 생각하던 이런 아카데미의 누드라는 것은 화가로서 기본적으로 갖춰야 하는 요건과 같은 것이었습니다.",
+    youtubeTimestamp: "304s",
+    chapter: "Chapter 1: 몸, 현실의 나를 그리다"
+  },
+  {
+    artist: "Henri Matisse",
+    title: "Nude in an Armchair",
+    description: "마티스의 누드 드로잉을 보면서 어떻게 이런 몸이라는 것이 변화를 거쳐서 20세기 초에 이르렀는지를 볼 수가 있습니다. 바로이 작품이 앙리 마티스가 그린 누드 드로잉 중에 하나인데요. 딱 봐도 전혀 이상적이지 않은 그런 이상적인 아름다움을 가지지 않고 지극히 현실적인 누드의 모습을 담고 있다는 것을 알 수 있습니다. 이 대상도 신화 역사 속에 나오는 인물이 아니라 바로 근처에 있는 가장 가까운 주변의 사람이라는 걸 알 수가 있죠. 이곳은 마티스가 머물던 호텔 방으로 알려져 있는데요. 이런 바닥의 문이나 근처에 이제 화병을 묘사한 것에서 앙리 마티스의 특징을 잘 살펴볼 수 있습니다.",
+    youtubeTimestamp: "349s",
+    chapter: "Chapter 1: 몸, 현실의 나를 그리다"
+  },
+  {
+    artist: "Paul Cezanne",
+    title: "Bathers",
+    description: "여기에서 소개하는 주제는 목욕하는 사람들이라는 주제입니다. 이것은 전통적으로 오랫동안 그려져온 주제였어요. 특히 엿보다라는 그런 관점을 넣을 수 있어서 극적인 구도를 창출할 수 있어서 많은 화가들이 굉장히 좋아하는 주제였는데 지금 보고 계시는 작품은 폴 세잔이 그린 목욕하는 사람들입니다. 이것을 잘 보시면 이 배경이 과연 신화 속의 배경인지 잘 알 수 없을 정도로 모호하고요. 얼핏 보면은 그냥 파리 강에서 수영하고 목욕하고 여가를 즐기는 사람들의 모습처럼 보이기도 합니다.",
+    youtubeTimestamp: "417s",
+    chapter: "Chapter 1: 몸, 현실의 나를 그리다"
+  },
+  {
+    artist: "Paul Gauguin",
+    title: "Tahitian Women Bathing",
+    description: "고갱은 자신이 생각하는 새로운 이상향을 오세아니아 남태평양의 타히티 섬에서 찾았습니다. 그래서 이 타히티에서 만난 사람들의 목욕하는 장면을 그렸는데요. 이런 깊이감이 잘 드러나지 않는 평면적인 구성이나 아주 과감한 색감의 사용 등이 또 고갱이 추구했던 그런 예술적인 방향이기도 합니다. 그래서 이런 식으로 목욕하는 사람들이라는 아주 전통적인 주제가 현대적으로 화가들의 주관적인 해석에 따라 재해석되면서 다른 모습으로 나타났다는 것을 볼 수가 있습니다.",
+    youtubeTimestamp: "462s",
+    chapter: "Chapter 1: 몸, 현실의 나를 그리다"
+  },
+  {
+    artist: "Pierre-Auguste Cot",
+    title: "Springtime",
+    description: "지금 보고 계신 이 작품은 완전히 아카데미 화풍으로 그려진 고전적인 주제를 가지고 있습니다. 그네 탄 두 남녀가 굉장히 사랑스러운 표정으로 서로를 바라보고 있고요. 아주 크기가 큰, 이번 전시에서 가장 크기가 큰 작품인데요. 그네를 타면서 이런 낙원과 같은 아르카디아의 이상향을 그런 배경을 잘 보여주는 작품으로 선보이게 됐습니다. 이 작품은 쌀롱전에 출품이 돼서 아주 큰 호응을 받았고요. 굉장한 명성을 떨치게 되면서 이후에는 부채나 도자기와 같은 여러 사물에 또 변형돼서 재해석돼서 남겨지기도 했습니다.",
+    youtubeTimestamp: "563s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Raimundo de Madrazo y Garreta",
+    title: "Masqueraders",
+    description: "이 작품은 스페인 화가 가문 출신의 마드라소가 그린 가면 무도회 참가자입니다. 굉장히 아카데믹한 화풍으로 그려졌지만 당시에 가면 무도회 참석한 사람들이 둘이서 미래를 나누고 있는 그런 아주 풍속화적인 특징을 보여줍니다.이 화가는 질감을 표현하는 것에 굉장히 뛰어났는데요. 이런 뒤에 있는 꽃이나 나뭇잎들부터 차가운 대리석이나 금속의 표현, 다양한 천의 질감들을 굉장히 탁월하게 묘사해서 명성을 떨쳤고요. 아주 크게 확대해서 봐도 그 세밀한 표현력이 굉장히 놀라운 작품입니다.",
+    youtubeTimestamp: "624s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "After? Gustave Moreau",
+    title: "Salome Dancing Before the Head of St. John the Baptist",
+    description: "다음으로는 19세기 후반에 나타났던 새로운 아주 강력한 새로운 예술적 경향성인 상징주의 작품의 예를 보러가 보겠습니다. 상징주의는 눈에 보이는 세계가 아니라 눈에 보이지 않는 정신적인 세계를 담아내기 위해서 노력했던 예술 운동 중에 하나입니다. 이 작품의 배경은 살롬의 이야기로 성경 이야기의 모티브를 두고 있지만 그 표현하는 방식은 귀스타브 모로와 같은 상징주의 영향을 많이 받은 방식으로 변화해 나갔음을 알 수가 있고요.",
+    youtubeTimestamp: "683s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Odilon Redon",
+    title: "Pegasus and Bellerophon",
+    description: "이번 작품과 함께 이번 전시에서 소개하는 또 다른 상징주의 화가의 작품이 바로 오딜롱 르동의 작품입니다. 바로 옆에 위치해 있고요.이 작품입니다. 이 작품 역시 어떤 신화적인 소재를 주제로 하고 있지만 오딜롱 르동이 스스로 누아르라고 불렀던 이런 목탄화를 콩테 크레용을 그린 검은색 그림들을 누아르라고 불렀던 그 연작 중에 하나입니다. 페가소스를 굉장히 크게 묘사하고 이 주인이 벨로로폰을 아주 작게 묘사한 것에서이 순화적인 동물의 존재감을 드러내려고 했다는 것을 알 수가 있고요.",
+    youtubeTimestamp: "719s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Edouard Vuillard",
+    title: "Mme Vuillard Sewing by the Window, rue Truffaut",
+    description: "다음으로는 에드아르라는 화가를 소개해 드리겠습니다. 에드아르 비야르는 역시 상징주의 계열에 속하지만 굉장히 장식적인 면을 많이 드러내면서 나비파의 일원으로 활동했던 화가입니다. 특히 이 작품을 보시면 에두아르 비야르의 어머니는 제봉사였습니다. 그래서 지금 창틀에서 바느질를 하고 있는 어머니의 모습을 그리면서이 집안의 풍경을 같이 묘사를 했는데요. 어머니가 제봉사였던 것에 영향을 받아서 이런 벽지 무늬라든지 그리고 이런 테이블보나 다양한 천의 무늬와 천의 질감과 같은 것들을 굉장히 잘 표현하면서 장식적인 특징과 본인이 생각하는 어떤 정신적인 세계를 같이 구현하기 위해서 노력했다는 것을 알 수가 있습니다.",
+    youtubeTimestamp: "779s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Edouard Vuillard",
+    title: "Misia at the Piano",
+    description: "저희가 이 에드아르 비아르의 방을 어떤 벽지 패턴으로 배경을 살렸는데요. 그게 바로이 작품의 배경에서 무늬를 가져온 것입니다. 이 작품은 피아노를 치는 미시아라는 작품인데 미시아 나탕이라는 사람 특히 이 나탕 부부는 에드아르 비아르 그리고 다른 화가들도 후원했던 사람들이었습니다. 이 안에 미시아 나탕이 피아노를 치는 모습인데요. 이런 화려한 벽지 패턴과 이런 피아노의 검은색의 그런 대비가 강렬하면서 마치 피아노를 치는 음이 들리는 것처럼 굉장히 생생한 분위기를 전달하고 있습니다.",
+    youtubeTimestamp: "833s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Edouard Vuillard",
+    title: "Self-Portrait with Waroquy",
+    description: "이것은 에두아르 뷔야르가 2살 때 그렸던 자화상입니다. 이런 얼굴이나이 뒤에 있는 친구인 와로키까지 분명하지 않고 굉장히 흐릿하게 표현을 하면서 이런 눈에 보이는 것을 정밀하게 묘소하는 것보다 정신적인 세계 즉 뷔야르가 스스로 가지고 있던 생각이나 감정과 같은 것들을 굉장히 신비로운 분위기로 표현을 하했다는 것을 알 수가 있고요. 또 한 손에 팔레트와 붓을 들고 있어서 이런 화가로서의 정체성을 같이 드러내고 있다는 것을 알 수 있습니다. 특히 이 오른쪽 아래의 유리병을 보시면요. 뷔야르 친구 와로키까지 유리병에 반사돼 보이는 것을 알 수가 있는데요. 그것으로 미루어서 이 작품이 거울에 비친 자신들의 모습을 그리고 있음을 알 수 있게 하는 부분입니다.",
+    youtubeTimestamp: "873s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Edouard Vuillard",
+    title: "Luncheon",
+    description: "특히 뷔야르는 어머니와 만년까지 함께 살면서 어머니가 돌아가실 때까지 함께 살면서 어머니를 그린 작품을 많이 남겼는데요. 이렇게 식사 장면을 차리고 있는 어머니의 모습도 여기 이제 많은 기물들도 있지만 그것도 매우 정교하게 묘사를 하고 있다는 것을 알 수가 있고요.",
+    youtubeTimestamp: "938s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Edouard Vuillard",
+    title: "The Artist's Mother",
+    description: "정교하기라기보다는 다양하게 이제이 작품처럼 드로잉도 한 점을 저희가 소개해 드릴 수가 있는데요. 비야르는 언제나 스케치북을 챙겨 가지고 다 다니면서 눈에 보이는 것들을 굉장히 빠르게 스케치하는 습관이 있었다고 합니다. 그래서 어머니가 소파에 앉아 있는 이런 방안의 장면을 뒤에 액자들과 그리고 화병 그리고 여러 기물들의 위치를 굉장히 빠르게 스케치를 한 작품 중에 하나로 또 소개를 해 드릴 수가 있고요. 또 이렇게 순간의 인상을 포착하기 위해서 스케치를 항상 챙겨 다녔던 비야르의 모습은 또 이후에 순간의 인상을 포착해서 그림 속에 담고자 했던 인상주의와도 연결되는 면이 있다고 할 수 있습니다.",
+    youtubeTimestamp: "963s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Auguste Renoir",
+    title: "Young Girl in a Pink-and-Black Hat",
+    description: "저희가 이번 전시에 르누아르 작품이 오귀스트 르누아르의 작품이 많이 출품이 되었는데요. 로버트 리먼이 르누아르의 작품을 특히 좋아했다고 합니다. 그래서 이 작품에서도 저희 이번에 포스터로 쓰고 있기 때문에 많은 분들이 매우 익숙하실 텐데요. 굉장히 아름다운 모자를 쓴 소녀의 모습을 그렸습니다. 르누아르는 당시 여성초상화를 잘 그리는 것으로 또 굉장히 큰 명성을 떨쳤고요. 또 이렇게 당시의 패션을 잘 반영한 그런 아름다운 색감의 조화롭고 부드러운 그런 붓질로 표현한 초상화를 많이 그려서 수요층이 굉장히 높았습니다.",
+    youtubeTimestamp: "1105s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Auguste Renoir",
+    title: "Two Young Girls at the Piano",
+    description: "음으로 보실 작품은 또 역시 가장 눈에 익었을 피아노로 치는 소녀들을 만나러가 보겠습니다.이 이 작품은 아주 재미있는 이야기를 가지고 있습니다. 1891년에 프랑스 미술부 장관이 오귀스트 르누아르에게 직접 그림을 주문했습니다. 뤽상부르 미술관의 걸릴 그림을 그려 달라는 주문이었는데요. 그때까지 인상주의 화가들은 대중으로부터는 잘 인정받지 못하고 있었기 때문에 국가가 인상주의 화가에게 이런 작품을 의뢰했다는 사실만으로도 굉장히 중요한 사건이었습니다. 인상주의 화가들이 인정받기 시작했다는 것을 알려 주는 것이었기 때문에 르누아르도 굉장히 열심히 이 작업을 했다고 알려져 있어요. 그래서 1891년에 의뢰를 했는데 1892년에 여섯 점의 작품을 완성하게 됩니다.",
+    youtubeTimestamp: "1173s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Mary Cassatt",
+    title: "Spring: Margot Standing in a Garden",
+    description: "이번 전시에는 여성 화가들의 작품들도 꽤 많이 출품이 되어 있습니다. 1부에서 제가 소개를 해 드리지 못했지만 수잔 발라동이라는 여성 화가가 있었고요. 또 유일하게 프랑스 인상주의 화가 중에 여성이었던 베리트 모리조의 드로잉도 포함이 되어 있는데요. 지금이 벽면에는 메리 카사트의 작품 세 점이 전시가 되어 있습니다. 메리 카사트는 미국 출신의 인상주의 화가로 거의 유일하게 프랑스 화단에 스며들어서 활발하게 활동을 했던 화가고요. 그리고 나중에 유럽의 인상주의 미술을 미국으로 소개할 때도 굉장히 중요한 다리 역할을 했습니다. 특히 교회에서 여가 활동을 하는 그런 부르주아 가정 소녀들의 또는 여성들의 이런 일상과 삶을 굉장히 따뜻한 시선으로 잘 그려낸 작품으로 유명한데요.",
+    youtubeTimestamp: "1291s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Mary Cassatt",
+    title: "Denise at Her Dressing Table",
+    description: "그 옆에 있는 카사트의 다른 작품을 보시면이 작품 역시 이웃집에 있던 드니스라는 사람을 묘사한 것입니다. 이런 거울을 보는 사람은 이제 전통적으로 어떤 허영심 또는 자기 성찰이라는 그런 주제를 가지고 있는데요. 카사트가 이 작품을 그렸을 만년에는 시력이 매우 나빠져서 거의 작품 활동을 하기 어려웠을 정도라고 합니다. 근데 그랬다는 거를 감안해도 너무나 그 세심하게 잘 그린, 드니스라는 사람이 가지고 있는 이런 표정이나 감정들이 잘 드러나기 때문에 메리 카사트의 말년의 작품을 잘 보여주는 작품으로 이번에 소개를 해 드리게 되었습니다.",
+    youtubeTimestamp: "1361s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Kees van Dongen",
+    title: "Maria",
+    description: "이 작품은 네덜란드 출신 화가 키스반 동겐이 그린 여성 초상화 마리아라는 작품입니다. 키스반 동겐은 여성 초상화를 잘 그리는 화가로 매우 유명했습니다. 특히 이런 검고 깊은 눈매 그리고이 목에 음영으로 칠한 초록색 물감 아주 원색인 빨간색을 이용해서 아주 대담한 격자 무늬의 그런 옷을 표현한 방식도 키스반 동겐이 20세기 초 색채를 감 감 감각적으로 쓰던 야수파 일원으로 활동하면서 남긴 그런 전형적인 특징 중에 하나인데요.",
+    youtubeTimestamp: "1406s",
+    chapter: "Chapter 2: 지금의 우리, 초상의 개성"
+  },
+  {
+    artist: "Theodore Rousseau",
+    title: "The Pond (La Mare)",
+    description: "3부를 시작하는 작품들은 바르비종 확파의 작품입니다. 특히 처음에 보여 드리는 두 개의 작품은 테오도르 루소의 작품인데요. 루소는 풍경화를 역사화의 반열로 끌어올렸다는 평가를 받을 정도로 굉장히 당시에도 명성을 떨쳤던 풍경화가입니다. 바르비종 그림들은 사실 이게 인상주의와 연관이 있을까라는 그런 궁금증을 불러일으키실 텐데요. 이때는 이제 밖에서 직접 작업을 하긴 어려웠지만 이런 밖에서 본 이런 숲의 느낌, 이런 습지의 느낌이나 이런 대기의 움직임들을 그림에 담아내기 위해서 노력했던 그런 1세대를 바르비종 화파라고 볼 수 있습니다.",
+    youtubeTimestamp: "1598s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Jules Dupre",
+    title: "Landscape with Cattle at Limousin",
+    description: "이 작품은 뒤프레가 그린 작품인데요. 쥘 뒤프레는 프랑스를 배경으로 풍경화를 그리는 화가이기도 했고 또 바르비종의 일원으로도 활동했지만 이 화가는 영국을 여러 차례 여행하면서 영국의 낭만주의 풍경화의 거장 존 컨스터블의 작품을 경험하게 됐습니다. 그러면서 거기에서 영향을 받아서 이렇게 큰 하늘을 큰 부분으로 차지하게 하면서 다이나믹한 구름의 움직임을 보여주는 것. 그리고 이 아래에 하얗게 하얗게 점을 찍은 이런 부분들은 햇빛이 비춰서 빛나는 부분을 표현하는 하얀색 물감으로 표현을 한 것입니다.",
+    youtubeTimestamp: "1669s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Charles-Francois Daubigny",
+    title: "Landscape with Ducks",
+    description: "샤를 프랑수와 도비니의 오리가 있는 풍경을 소개해 드릴 수가 있는데요. 이 작품은 해질력의 황혼 무렵의 풍경을 굉장히 시적이고 감상적으로 담아내고 있습니다. 이런 풍경화들을 파노라마 풍경화라고 해서 이런 부류의 그림들이 엽서로도 그려져서 굉장히 넓게 유통이 됐다고도 하는데요.이 작품은 특히 바르비종과 그리고 인상주의의 경계에 있는 작품으로도 많이 설명이 되기도 합니다.",
+    youtubeTimestamp: "1744s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Paul Cezanne",
+    title: "Trees and Houses Near the Jas de Bouffan",
+    description: "이 다음으로 이어진 경향성 중에 하나인 폴세잔의 작품을 만나 보러가 보겠습니다. 제가 인상주의 이후로 이어진 다양한 경향성이라고 말씀을 드렸는데요. 그건 바로 후기 인상주의를 이야기합니다. 지금 보고 계시는 작품은 후기 인상주의자로 아주 대표적으로 꼽을 수 있는 폴 세잔의 작품입니다. 폴 세잔은 굉장히 내성적인 성격을 가지고 있었다고 해요. 그래서 도시에서 여러 사람들과 함께 어울려 살기보다 이제 가족들과 함께 프랑스 남부의 액상 프로방스에서 자리를 잡고 살아가면서 좀 이제 조용하고 정돈된 삶을 살면서 그 삶을 굉장히 좋아했다고 알려져 있는데요.",
+    youtubeTimestamp: "1796s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Henri-Edmond Cross",
+    title: "Landscape with Stars",
+    description: "앙리 에드몽 크로스라는 화가의 이름이 여러분께는 좀 낯설 수가 있을 거예요. 근데 이번 전시에는 앙리 에드몽 크로스의 작품이 총 여섯 점 출품이 됐습니다. 그중에 먼저 세 점을 살펴보게 될 텐데요.이 화가는 활동의 반경이 굉장히 컸던 화가입니다. 특히 이 작품을 보면 별이 있는 풍경이라는 제목을 가지고 있고요. 이 이 장면을 보면 좀 떠오르는 작품이 하나 있으실 수도 있는데 프랑스에서 전시됐던 반 고흐의 별이 빛나는 밤이라는 작품을 보고 영감을 받아서 그린 그림으로 알려져 있습니다.",
+    youtubeTimestamp: "1942s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Henri-Edmond Cross",
+    title: "Pines Along the Shore",
+    description: "해변의 소나무라는 앙리 에드몽 크로스의 다른 작품인데 가까이서 보시면이 작품은 신인상주의 기법으로 만들어진 작품입니다. 신인상주의는 후기 인상주의의 하나의 계열로 색을 점으로 분해해서 팔레트 위에서 색을 섞지 않고 화면 위에서 색을 점으로 찍어서 멀리서 사람이 봤을 때 사람의 눈속에서 이걸 혼합해서 인식하도록 하는 과학적인 색채 이론을 기반으로 하는 후기 인상주의 하나의 계열입니다.",
+    youtubeTimestamp: "1991s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Henri-Edmond Cross",
+    title: "Garden of the Painter at Saint Clair",
+    description: "다음으로 설명해 드릴 크로스의 작품은 바로 남부 생클레르 지방에 정착해서 그림을 그릴 때 이런 남부의 강렬한 태양과 아열대 기후에 초목이 함께 그려진 작품들입니다. 이때는 야수파 화가들과 함께 활동하면서 그 영향이 드러나는 작품들도 남겨서 이 화가의 활동 반경이 매우 컸다는 것을 알 수가 있는 부분입니다.",
+    youtubeTimestamp: "2051s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Vincent van Gogh",
+    title: "The Flowering Orchard",
+    description: "이번 전시에서 많이 기다리셨을 또 다른 대표작 중에 하나인 반 고흐의 작품을 보러가 보겠습니다. 이 작품은 반 고흐가 남부 아를 지방에 정착해서 그렸던 과수원 연작 중에 하나입니다. 특히 이때 동생 테오 반고흐에게 남겼던 편지에서 지금 과수원에 나무의 꽃이 엄청 피고 있다. 나는 이걸 정말 열정적으로 작업할 거야라는 그런 말을 남겼는데요. 굉장히 밝고 선명한 초록색 색감에 꽃이 피어나는 굉장히 희망이 느껴지는 것 같은 그런 감정이 잘 드러나는 반 고흐 작품을 소개를 해드릴 수가 있게 됐고요.",
+    youtubeTimestamp: "2083s",
+    chapter: "Chapter 3: 풍경화, 자연"
+  },
+  {
+    artist: "Camille Pissarro",
+    title: "The Boulevard Montmartre on a Winter Morning",
+    description: "첫 번째는 바로 도시입니다. 산업화가 되면서 많은 노동자가 파리로 유입이 되었는데 그때만 해도 설비가 그 인구의 수를 따라가지 못해서 되게 구불구불하고 좁은 길에 비위생적인 그런 면들을 타파하기 위해서 대대적인 도시 재개발 계획이 이루어지게 됐습니다. 그러면서 지금처럼 광장과 광장을 잇는 큰 대로가 이어지는 그런 근대적인 도시로서의 면모를 갖추게 됐는데요. 그러면서 이 도시를 그리기 위해서 많은 화가들이 그림을 그렸는데 그 중에 한 점이 바로 카미유 피사로의 도시 연작 중에 하나입니다.",
+    youtubeTimestamp: "2164s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Alfred Sisley",
+    title: "Allee of Chestnut Trees",
+    description: "그럼 이때 나타난 교외라는 공간성을 보러가 보겠습니다. 이때 교외라는 공간도 매우 새롭게 대두가 됐습니다. 이제 산업화가 일어나면서 일터와 가정이 분리가 됐습니다. 과거에는 농업 사회였기 때문에 특별히 일을 하고 쉬는 시간이 나누어지지 않았지만 이제 산업화가 되었다 보니 일할 때는 일하고 쉴 때는 쉬는 이런 환경이 만들어지게 됐는데요. 요즘도 우리는 휴일이 좀 길어지면 여행을 가잖아요. 이때에도 철도가 발달이 되면서 파리의 시민들도 굉장히 쉽게 도시 밖으로 나갈 수가 있게 됐습니다. 그러면서 그림 같은 풍경이 있는 그런 크고 작은 마을들에 휴양지들이 많이 만들어졌고요.",
+    youtubeTimestamp: "2244s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Alfred Sisley",
+    title: "Rue Eugene Moussoir at Moret: Winter",
+    description: "알프레드 시슬레는 풍경화를 그리는 것에 매우 진심이었고 어디에 가나 이재를 펼쳐 놓고 풍경화를 그렸다고 하는데요. 겨울에 그린 풍경화도 이번에 저희가 소개를 하게 됐습니다. 바로 옆에 있는이 작품이 알프레드 시슬레가 그린 겨울풍경으로 그린 자신이 살던 어 집 근처 거리를 그린 것인데요. 또 겨울의 느낌을 또 하얀색과 이런 흐린 하늘을 통해서 겨울의 풍경을 굉장히 감각적으로 잘 그리고 있다는 것을 알 수가 있고 눈이 오나 비가 오나 이젤을 펴고 그림을 그렸던 시슬레 특징을 굉장히 잘 보여주는 작품입니다.",
+    youtubeTimestamp: "2325s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Auguste Renoir",
+    title: "Figures under a Tree",
+    description: "",
+    youtubeTimestamp: "2365s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Auguste Renoir",
+    title: "Landscape with a Girl",
+    description: "",
+    youtubeTimestamp: "2388s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Kees van Dongen",
+    title: "At the Racetrack",
+    description: "",
+    youtubeTimestamp: "2416s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Camille Pissarro",
+    title: "The Harvest, Pontoise",
+    description: "",
+    youtubeTimestamp: "2473s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Camille Pissarro",
+    title: "Marketplace in Pontoise",
+    description: "",
+    youtubeTimestamp: "2527s",
+    chapter: "Chapter 4: 도시에서 전원으로"
+  },
+  {
+    artist: "Auguste Renoir",
+    title: "View of the Seacoast near Wargemont in Normandy",
+    description: "",
+    youtubeTimestamp: "2657s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Pierre Bonnard",
+    title: "View of The Old Port, Saint-Tropez",
+    description: "",
+    youtubeTimestamp: "2694s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Auguste Renoir",
+    title: "Figures on the Beach",
+    description: "",
+    youtubeTimestamp: "2759s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Albert Marquet",
+    title: "The Port de Bougie, Algeria in Sunlight",
+    description: "",
+    youtubeTimestamp: "2821s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Henri-Edmond Cross",
+    title: "Venie: Night of the Festival of the Redeemer",
+    description: "",
+    youtubeTimestamp: "2888s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Maurice de Vlaminck",
+    title: "Sunlight on Water",
+    description: "",
+    youtubeTimestamp: "2966s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Maurice de Vlaminck",
+    title: "Sails at Chatou",
+    description: "",
+    youtubeTimestamp: "3003s",
+    chapter: "Chapter 5: 물결 속에서"
+  },
+  {
+    artist: "Paul Signac",
+    title: "Le Pouliguen: Fishing Boats",
+    description: "",
+    youtubeTimestamp: "3044s",
+    chapter: "Chapter 5: 물결 속에서"
+  }
+];
+
+export const YOUTUBE_VIDEO_ID = "4Hu4JMrQ-d8";
+export const YOUTUBE_BASE_URL = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`;

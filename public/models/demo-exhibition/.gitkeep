@@ -1,0 +1,12 @@
+# Place your exhibition.glb file here
+
+This directory should contain your 3D exhibition model in GLB format.
+
+Example:
+- exhibition.glb (main 3D model)
+
+Recommended specifications:
+- Format: GLB with Draco compression
+- File size: < 5MB (max 20MB)
+- Polygons: 100,000 - 500,000 triangles
+- Textures: 2048x2048 or smaller
